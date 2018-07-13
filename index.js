@@ -1,28 +1,29 @@
 const Nexmo = require('nexmo');
 const privateKey = require('fs').readFileSync('./private.key');
 
-const recipientNumber = process.env.phoneNumber;
+const zoomRoom = '15165953476';
+const recipientNumber = '19193572932';
 
 const nexmo = new Nexmo({
-  apiKey: process.env.apiKey,
-  apiSecret: process.env.apiSecret,
-  applicationId: process.env.appId,
+  apiKey: '88ace146',
+  apiSecret: 'Fu89XwpGIKV0nKhS',
+  applicationId: '82cf3dca-9c2a-45b1-9eb4-a0a86932c56a',
   privateKey: privateKey
 })
 
 exports.handler = (event, context, callback) => {
-    console.log('Calling phone number', recipientNumber);
+    console.log('Calling phone number', zoomRoom);
 
     nexmo.calls.create({
       to: [{
         type: 'phone',
-        number: recipientNumber
+        number: zoomRoom
       }],
       from: {
         type: 'phone',
-        number: 12345678901
+        number: '12345678901'
       },
-      answer_url: ["https://nexmo-community.github.io/ncco-examples/first_call_talk.json"]
+      answer_url: ['https://raw.githubusercontent.com/justdroo/aws_button/master/ncco_zoom.json']
     }, (err, res) => {
       if(err) {
         console.error("there is an error");
@@ -30,6 +31,30 @@ exports.handler = (event, context, callback) => {
       }
       else {
         console.log(res);
+        console.log('Calling phone number', recipientNumber);
+        
+        nexmo.calls.create({
+          to: [{
+            type: 'phone',
+            number: recipientNumber
+          }],
+          from: {
+            type: 'phone',
+            number: '12345678901'
+          },
+          answer_url: ['https://raw.githubusercontent.com/justdroo/aws_button/master/ncco_drew.json']
+        }, (err, res) => {
+          if(err) {
+            console.error("there is an error");
+            console.error(err);
+          }
+          else {
+            console.log(res);
+          }
+        });
       }
     });
 };
+
+
+console.log('Calling phone number', recipientNumber);

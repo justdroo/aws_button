@@ -1,12 +1,12 @@
 const Nexmo = require('nexmo');
 const privateKey = require('fs').readFileSync('./private.key');
-const appId = process.env.appId;
+
 const recipientNumber = process.env.phoneNumber;
 
 const nexmo = new Nexmo({
   apiKey: process.env.apiKey,
   apiSecret: process.env.apiSecret,
-  applicationId: appId,
+  applicationId: process.env.appId,
   privateKey: privateKey
 })
 

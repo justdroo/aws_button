@@ -1,7 +1,7 @@
 const Nexmo = require('nexmo');
 const privateKey = require('fs').readFileSync('./private.key');
 
-const zoomRoom = '15165953476';
+const zoomRoom = '16468769923';
 const recipientNumber = '19193572932';
 
 const nexmo = new Nexmo({
@@ -17,7 +17,8 @@ exports.handler = (event, context, callback) => {
     nexmo.calls.create({
       to: [{
         type: 'phone',
-        number: zoomRoom
+        number: zoomRoom,
+        dtmfAnswer: 'pppp648531689#pppp#'
       }],
       from: {
         type: 'phone',
@@ -32,7 +33,7 @@ exports.handler = (event, context, callback) => {
       else {
         console.log(res);
         console.log('Calling phone number', recipientNumber);
-        
+
         nexmo.calls.create({
           to: [{
             type: 'phone',

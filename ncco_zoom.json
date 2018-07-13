@@ -1,5 +1,10 @@
 [
   {
+    "action": "talk",
+    "voiceName": "Zoom Room",
+    "text": "Welcome"
+  },
+  {
     "action": "conversation",
     "name": "zoom-bridge-call"
   }

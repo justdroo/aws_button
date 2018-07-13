@@ -5,7 +5,7 @@
     "text": "Welcome to the call Drew"
   },
   {
-  "action": "conversation",
-  "name": "zoom-bridge-call"
+    "action": "conversation",
+    "name": "zoom-bridge-call"
   }
 ]

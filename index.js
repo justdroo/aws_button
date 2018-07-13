@@ -18,7 +18,7 @@ exports.handler = (event, context, callback) => {
       to: [{
         type: 'phone',
         number: zoomRoom,
-        dtmfAnswer: 'pppp648531689#pppp#'
+        dtmfAnswer: 'pppp2863566849#pppp#'
       }],
       from: {
         type: 'phone',
@@ -56,6 +56,3 @@ exports.handler = (event, context, callback) => {
       }
     });
 };
-
-
-console.log('Calling phone number', recipientNumber);

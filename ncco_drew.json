@@ -1,0 +1,11 @@
+[
+  {
+    "action": "talk",
+    "voiceName": "Drew",
+    "text": "Welcome to the call Drew"
+  },
+  {
+  "action": "conversation",
+  "name": "zoom-bridge-call"
+  }
+]

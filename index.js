@@ -1,8 +1,8 @@
 const Nexmo = require('nexmo');
 const privateKey = require('fs').readFileSync('./private.key');
 
-const zoomRoom = '16468769923';
-const recipientNumber = '19193572932';
+const zoomRoom = '<confNumber>';
+const recipientNumber = '<myNumber>';
 
 const nexmo = new Nexmo({
   apiKey: '<APIKEY>',

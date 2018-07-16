@@ -5,9 +5,9 @@ const zoomRoom = '16468769923';
 const recipientNumber = '19193572932';
 
 const nexmo = new Nexmo({
-  apiKey: '88ace146',
-  apiSecret: 'Fu89XwpGIKV0nKhS',
-  applicationId: '82cf3dca-9c2a-45b1-9eb4-a0a86932c56a',
+  apiKey: '<APIKEY>',
+  apiSecret: '<APISECRET>',
+  applicationId: '<APPID>',
   privateKey: privateKey
 })
 
